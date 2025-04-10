@@ -42,7 +42,7 @@ def main():
 
         print(f"Image: {os.path.basename(image_path[0])}")
         print(f"Best Caption: {matched[0]}")
-        print("-" * 40)
+        print("-" * 50)
 
 if __name__ == "__main__":
     main()
