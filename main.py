@@ -19,17 +19,6 @@ def main():
     )
     dataloader = DataLoader(dataset, batch_size=1)
 
-    # for image_tensor, captions, path in tqdm(dataloader):
-    #     image_tensor = image_tensor.to(device)
-    #     image_feature = clip_model.encode_image(image_tensor)
-    #
-    #     text_features = clip_model.encode_text(captions)
-    #     matched = match_caption(image_feature, text_features, captions[0], top_k=1)
-    #
-    #     print(f"Image: {os.path.basename(path[0])}")
-    #     print(f"Best Caption: {matched[0]}")
-    #     print("-" * 40)
-
     for image, captions, image_path in tqdm(dataloader):
         image = image.to(device)
         image_feature = clip_model.encode_image(image)
